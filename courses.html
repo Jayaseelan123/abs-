@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Courses | ABS Academy</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .modal-content {
+            border-radius: 2rem;
+            border: none;
+            overflow: hidden;
+        }
+
+        .module-item {
+            padding: 1.25rem;
+            border-radius: 1rem;
+            background: #f8fafc;
+            margin-bottom: 0.75rem;
+            transition: all 0.3s ease;
+            border-left: 4px solid #198754;
+        }
+
+        .module-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-glass py-3">
+        <div class="container">
+            <a class="navbar-brand text-decoration-none" href="index.html">
+                <img src="logo23.png" alt="ABS Academy Logo" style="height: 80px; object-fit: contain;">
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="index.html">Home</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-success"
+                            href="courses.html">Course</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted"
+                            href="admission.html">Admission</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="contact.html">Contact
+                            Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-5 mt-5 bg-soft-green border-bottom">
+        <div class="container pt-lg-5 text-center">
+            <h1 class="display-3 fw-800 text-dark mb-3">Our<span class="text-gradient">Specializations</span></h1>
+            <p class="lead text-secondary mx-auto col-md-8">Click "View Modules" on any track to see your future career
+                roadmap.</p>
+        </div>
+    </header>
+
+    <!-- Detailed Courses Grid -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <!-- 1. Digital Marketing -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="course-card-custom h-100 bg-white border-top border-5 border-primary p-4">
+                        <div class="icon-box gradient-icon-box mb-4"><i class="bi bi-graph-up-arrow fs-3"></i></div>
+                        <h4 class="fw-bold mb-3">Digital Marketing Specialist</h4>
+                        <p class="text-muted small mb-4">Master global SEO, Meta Advertising, and performance content to
+                            drive business growth at scale.</p>
+                        <ul class="list-unstyled small mb-4">
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Advanced Global SEO Logic
+                            </li>
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> PPC & Meta Ads Execution
+                            </li>
+                            <li><i class="bi bi-check2 text-success me-2"></i> Performance Metrics & ROI</li>
+                        </ul>
+                        <button class="btn btn-primary w-100 rounded-pill module-trigger" data-bs-toggle="modal"
+                            data-bs-target="#courseModal" data-course="dm">View Modules & Enroll</button>
+                    </div>
+                </div>
+
+                <!-- 2. AI Development -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="course-card-custom h-100 bg-white border-top border-5 border-success p-4">
+                        <div class="icon-box gradient-icon-box mb-4"><i class="bi bi-robot fs-3"></i></div>
+                        <h4 class="fw-bold mb-3">AI & Strategic Thinking</h4>
+                        <p class="text-muted small mb-4">Build neural networks and integrate modern LLMs into automated
+                            business logic architectures.</p>
+                        <ul class="list-unstyled small mb-4">
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Neural Network Engineering
+                            </li>
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> LLM & GPT Model Training
+                            </li>
+                            <li><i class="bi bi-check2 text-success me-2"></i> Strategic Automation Workflows</li>
+                        </ul>
+                        <button class="btn btn-primary w-100 rounded-pill module-trigger" data-bs-toggle="modal"
+                            data-bs-target="#courseModal" data-course="ai">View Modules & Enroll</button>
+                    </div>
+                </div>
+
+                <!-- 3. Full Stack -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="course-card-custom h-100 bg-white border-top border-5 border-info p-4">
+                        <div class="icon-box gradient-icon-box mb-4"><i class="bi bi-code-slash fs-3"></i></div>
+                        <h4 class="fw-bold mb-3">Full Stack Developer</h4>
+                        <p class="text-muted small mb-4">Master end-to-end development using the MERN stack with
+                            advanced cloud deployment strategies.</p>
+                        <ul class="list-unstyled small mb-4">
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> MERN Stack Architecture</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> RESTful & GraphQL API Design
+                            </li>
+                            <li><i class="bi bi-check2 text-success me-2"></i> AWS/Heroku Infrastructure</li>
+                        </ul>
+                        <button class="btn btn-primary w-100 rounded-pill module-trigger" data-bs-toggle="modal"
+                            data-bs-target="#courseModal" data-course="fs">View Modules & Enroll</button>
+                    </div>
+                </div>
+
+                <!-- 4. Graphics & Video -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="course-card-custom h-100 bg-white border-top border-5 border-warning p-4">
+                        <div class="icon-box gradient-icon-box mb-4"><i class="bi bi-film fs-3"></i></div>
+                        <h4 class="fw-bold mb-3">Motion Visuals & Editing</h4>
+                        <p class="text-muted small mb-4">Master professional storytelling with motion graphics and
+                            advanced post-production techniques.</p>
+                        <ul class="list-unstyled small mb-4">
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Adobe After Effects VFX</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Cinematic Color Grading</li>
+                            <li><i class="bi bi-check2 text-success me-2"></i> Professional Brand Storytelling</li>
+                        </ul>
+                        <button class="btn btn-primary w-100 rounded-pill module-trigger" data-bs-toggle="modal"
+                            data-bs-target="#courseModal" data-course="graphics">View Modules & Enroll</button>
+                    </div>
+                </div>
+
+                <!-- 5. Blockchain -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="course-card-custom h-100 bg-white border-top border-5 border-danger p-4">
+                        <div class="icon-box gradient-icon-box mb-4"><i class="bi bi-link-45deg fs-3"></i></div>
+                        <h4 class="fw-bold mb-3">Blockchain Engineering</h4>
+                        <p class="text-muted small mb-4">Engineer decentralized applications and secure smart contracts
+                            rewriting the global economy.</p>
+                        <ul class="list-unstyled small mb-4">
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Solidity Smart Contracts
+                            </li>
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Decentralized API Logic</li>
+                            <li><i class="bi bi-check2 text-success me-2"></i> Crypto-Economic Security</li>
+                        </ul>
+                        <button class="btn btn-primary w-100 rounded-pill module-trigger" data-bs-toggle="modal"
+                            data-bs-target="#courseModal" data-course="bc">View Modules & Enroll</button>
+                    </div>
+                </div>
+
+                <!-- 6. UI/UX -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="course-card-custom h-100 bg-white border-top border-5 border-dark p-4">
+                        <div class="icon-box gradient-icon-box mb-4"><i class="bi bi-vector-pen fs-3"></i></div>
+                        <h4 class="fw-bold mb-3">UI/UX Design Strategy</h4>
+                        <p class="text-muted small mb-4">Master human-centered design principles and high-fidelity
+                            prototyping using modern toolsets.</p>
+                        <ul class="list-unstyled small mb-4">
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Figma System Architecture
+                            </li>
+                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Advanced User Research</li>
+                            <li><i class="bi bi-check2 text-success me-2"></i> Design System Scaling</li>
+                        </ul>
+                        <button class="btn btn-primary w-100 rounded-pill module-trigger" data-bs-toggle="modal"
+                            data-bs-target="#courseModal" data-course="uiux">View Modules & Enroll</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Modal -->
+    <div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content shadow-lg border-0">
+                <div class="modal-header border-0 pb-0 ps-4 pt-4">
+                    <h3 class="modal-title fw-bold text-dark" id="modalTitle">Course Curriculum</h3>
+                    <button type="button" class="btn-close me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="container-fluid">
+                        <p class="text-muted mb-4" id="modalDescription">Welcome to your technical roadmap. This program
+                            is divided into intense practical modules designed to take you from a learner to an
+                            industry-ready specialist.</p>
+                        <div id="moduleList" class="row row-cols-1 g-3">
+                            <!-- Modules will be injected here via JS -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 p-4 pt-0">
+                    <button type="button" class="btn btn-light rounded-pill px-4" data-bs-dismiss="modal">Close
+                        Plan</button>
+                    <a href="contact.html" class="btn btn-success rounded-pill px-5 shadow-lg">Start Enrollment
+                        Process</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-section pt-5 pb-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="mb-4">
+                        <a href="index.html">
+                            <img src="logo23.png" alt="ABS Academy Logo" style="height: 70px; object-fit: contain;">
+                        </a>
+                    </div>
+                    <p class="pe-lg-5 small" style="color: #94a3b8;">
+                        Empowering the next generation of AI-driven software developers with industry-relevant skills
+                        and placement confidence.
+                    </p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.instagram.com/aspirentech_academy/" class="social-icon"><i
+                                class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="footer-title">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none small">About Us</a>
+                        </li>
+                        <li class="mb-2"><a href="courses.html"
+                                class="text-muted text-decoration-none small">Courses</a>
+                        </li>
+                        <li class="mb-2"><a href="admission.html"
+                                class="text-muted text-decoration-none small">Admission</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none small">Contact
+                                Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="footer-title">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="terms-conditions.html"
+                                class="text-muted text-decoration-none small">Terms & Conditions</a></li>
+                        <li class="mb-2"><a href="privacy-policy.html"
+                                class="text-muted text-decoration-none small">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="footer-title">Contact Us</h6>
+                    <div class="contact-info-list mt-4">
+                        <div class="contact-info-item">
+                            <i class="bi bi-geo-alt"></i>
+                            <span class="small">2nd Floor, SBI Bank Building, TNEB Phase 2, Royakottai Road, Wahab
+                                Nagar, Krishngiri</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="bi bi-envelope"></i>
+                            <span class="small">absacademy@gmail.com</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="bi bi-telephone"></i>
+                            <div class="d-flex flex-column">
+                                <span class="small">+91 9750359750</span>
+                                <span class="small">+91 9566004966</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom mt-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="text-muted small mb-0">© 2026 ABS Academy. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({ duration: 800, once: true });
+
+        const courseData = {
+            dm: {
+                title: "Digital Marketing Specialist",
+                description: "Master the global SEO logic, Meta Ads ecosystems, and performance-based content strategies to drive business growth.",
+                modules: [
+                    "Module 1: Advanced Search Engine Optimization (Global Algorithms)",
+                    "Module 2: Meta Ads Mastery (Facebook, Instagram & Audience Lab)",
+                    "Module 3: Global PPC Strategy (Google Search & Display Network)",
+                    "Module 4: Performance Content & Copywriting Strategy",
+                    "Module 5: Data Analytics (Google GA4 & Multi-Channel ROI)",
+                    "Module 6: Final Portfolio: Real-Business Market Blitz"
+                ]
+            },
+            ai: {
+                title: "AI & Machine Learning",
+                description: "Deep-dive into the core of the fourth industrial revolution with Python-driven AI modeling and LLM integration.",
+                modules: [
+                    "Module 1: Python for Data Science & AI Foundations",
+                    "Module 2: Machine Learning Architectures (Supervised & Unsupervised)",
+                    "Module 3: Neural Networks & Deep Learning Essentials",
+                    "Module 4: Generative AI & Large Language Model (LLM) Integration",
+                    "Module 5: AI System Deployment & API Automation",
+                    "Module 6: Capstone: Industry AI Solutions Lab"
+                ]
+            },
+            fs: {
+                title: "Full Stack Developer",
+                description: "Go from scratch to building scalable, production-ready full-cycle web applications using the elite MERN stack.",
+                modules: [
+                    "Module 1: Modern Frontend with React (Flux & Component Architecture)",
+                    "Module 2: End-to-End Backend Logic (NodeJS & Express)",
+                    "Module 3: Scalable Database Systems (MongoDB & PostgreSQL)",
+                    "Module 4: Global Deployment (AWS, Cloud Architecture & CI/CD)",
+                    "Module 5: Performance Engineering & System Design",
+                    "Module 6: Final Repo: Production Scale Web Application"
+                ]
+            },
+            graphics: {
+                title: "Motion Visuals & Editing",
+                description: "Craft cinematic stories and brand narratives using professional motion design tools and VFX pipelines.",
+                modules: [
+                    "Module 1: Cinematic Theory & Storyboard Development",
+                    "Module 2: Motion Design Mastery (Adobe After Effects Lab)",
+                    "Module 3: Cinematic Color Grading (DaVinci Resolve)",
+                    "Module 4: Visual FX (VFX) & Compositing Techniques",
+                    "Module 5: Professional Brand Commercial Editing",
+                    "Module 6: Showreel: Client-Ready Visual Showcase"
+                ]
+            },
+            bc: {
+                title: "Blockchain Engineering",
+                description: "Rewrite the global financial rules by engineering secure smart contracts and decentralized Web3 ecosystems.",
+                modules: [
+                    "Module 1: Cryptography & Blockchain Infrastructure",
+                    "Module 2: Smart Contract Core Development (Solidity Mastery)",
+                    "Module 3: dApp Frontend Architectures (EtherJS & Web3JS)",
+                    "Module 4: Decentralized Finance (DeFi) & Secure Protocols",
+                    "Module 5: Blockchain Security & Smart Contract Auditing",
+                    "Module 6: Genesis Project: Deploying a Multi-Sig Protocol"
+                ]
+            },
+            uiux: {
+                title: "UI/UX Design Strategy",
+                description: "Engineer elite digital experiences by blending psychological research with high-fidelity prototyping systems.",
+                modules: [
+                    "Module 1: Human-Centered Design Psychology & Research",
+                    "Module 2: Advanced Prototyping Systems (Figma Mastery)",
+                    "Module 3: Dynamic Design System Architecture",
+                    "Module 4: User Journey Mapping & Strategic Persona Lab",
+                    "Module 5: Interface Accessibility & WCAG Standards",
+                    "Module 6: Final Case Study: Scalable Digital Product"
+                ]
+            }
+        };
+
+        const modal = document.getElementById('courseModal');
+        const triggerBtns = document.querySelectorAll('.module-trigger');
+
+        triggerBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const id = btn.getAttribute('data-course');
+                const data = courseData[id];
+
+                document.getElementById('modalTitle').innerText = data.title;
+                document.getElementById('modalDescription').innerText = data.description;
+
+                const list = document.getElementById('moduleList');
+                list.innerHTML = "";
+
+                data.modules.forEach(mod => {
+                    const div = document.createElement('div');
+                    div.className = "col";
+                    div.innerHTML = `<div class="module-item fw-semibold text-dark">${mod}</div>`;
+                    list.appendChild(div);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
