@@ -1,63 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | ABS Academy – Forging Industry-Ready Technologists</title>
-    <meta name="description" content="Learn about ABS Academy's mission, expert mentors, and AI-first teaching philosophy that creates industry-ready professionals.">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+    <meta name="description"
+        content="Learn about ABS Academy's mission, expert mentors, and AI-first teaching philosophy that creates industry-ready professionals.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
 
-        <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-glass py-2">
-        <div class="container">
+        <div class="container d-flex align-items-center justify-content-between">
             <a class="navbar-brand text-decoration-none" href="index.html">
-                <img src="logo23.png" alt="ABS Academy Logo" style="height: 60px; object-fit: contain;">
+                <img src="logo23.png" alt="ABS Academy Logo"
+                    style="height: 60px; max-width: 150px; object-fit: contain;">
             </a>
             <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
                     <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="index.html">Home</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="about.html">About</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="about.html">About</a>
+                    </li>
                     <li class="nav-item dropdown mx-2">
-                        <a class="nav-link dropdown-toggle fw-semibold text-muted" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle fw-semibold text-muted" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Course
                         </a>
                         <ul class="dropdown-menu border-0 shadow-lg p-3 rounded-4" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="ai-development.html">AI Development</a></li>
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="ai-automations.html">AI Automations</a></li>
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="digital-marketing-ai.html">Digital Marketing with AI</a></li>
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="web-development.html">Web Development</a></li>
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="full-stack-development.html">Full Stack Development</a></li>
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="graphic-design.html">Graphic Design</a></li>
-                            <li><hr class="dropdown-divider opacity-10"></li>
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-bold small text-primary" href="courses.html">View All Courses</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1"
+                                    href="ai-development.html">AI Development</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1"
+                                    href="ai-automations.html">AI Automations</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1"
+                                    href="digital-marketing-ai.html">Digital Marketing with AI</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1"
+                                    href="web-development.html">Web Development</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1"
+                                    href="full-stack-development.html">Full Stack Development</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1"
+                                    href="graphic-design.html">Graphic Design</a></li>
+                            <li>
+                                <hr class="dropdown-divider opacity-10">
+                            </li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-bold small text-primary"
+                                    href="courses.html">View All Courses</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="workshops.html">Workshops</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="summer-camp.html">Summer Camp</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="careers.html">Careers</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted"
+                            href="workshops.html">Workshops</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="summer-camp.html">Summer
+                            Camp</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="careers.html">Careers</a>
+                    </li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="contact.html">Contact
+                            Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Header -->
-    <header class="bg-soft-green py-4 mt-5  border-bottom position-relative overflow-hidden">
-        
+    <header class="bg-soft-green py-4  border-bottom position-relative overflow-hidden">
+
         <div class="container pt-lg-5 text-center" data-aos="fade-up">
             <span class="text-success fw-bold text-uppercase small" style="letter-spacing:2px;">Our Story</span>
             <h1 class="display-4 fw-800 text-dark mt-2 mb-3">About <span class="text-gradient">ABS Academy</span></h1>
-            <p class="lead text-secondary mx-auto col-md-8">We are not just a training academy. We are an elite technology launchpad — built to transform ambitious minds into industry-defining professionals.</p>
+            <p class="lead text-secondary mx-auto col-md-8">We are not just a training academy. We are an elite
+                technology launchpad — built to transform ambitious minds into industry-defining professionals.</p>
         </div>
     </header>
 
@@ -66,15 +89,29 @@
         <div class="container py-lg-5">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <span class="text-success fw-bold text-uppercase small" style="letter-spacing:1px;">Our Legacy</span>
-                    <h2 class="display-5 fw-bold text-dark mt-2 mb-4">Forging the Architects <span class="text-gradient">of Tomorrow</span></h2>
-                    <p class="lead text-secondary mb-4" style="line-height:1.7;">At ABS Academy, we don't just teach code — we forge the industry leaders. Operating as an elite training division of Aspirentech Business Solutions, we bridge the dangerous gap between academic theory and cutting-edge industry demands.</p>
-                    <p class="text-muted mb-4" style="line-height:1.9;">We recognized that traditional education often lags behind the hyper-speed of technological advancement. To solve this critical problem, we engineered an immersive, AI-first ecosystem where learners are treated as developers from day one. Our intensive environment transforms raw passion into strategic technical expertise, creating professionals who don't just find jobs — they define the future of technology.</p>
-                    <p class="text-muted" style="line-height:1.9;">Founded under the banner of Aspirentech Business Solutions in Krishnagiri, Tamil Nadu, ABS Academy has been quietly becoming the most results-oriented tech training center in the region. Every batch we train is a batch that gets placed. That is not a promise. That is our track record.</p>
+                    <span class="text-success fw-bold text-uppercase small" style="letter-spacing:1px;">Our
+                        Legacy</span>
+                    <h2 class="display-5 fw-bold text-dark mt-2 mb-4">Forging the Architects <span
+                            class="text-gradient">of Tomorrow</span></h2>
+                    <p class="lead text-secondary mb-4" style="line-height:1.7;">At ABS Academy, we don't just teach
+                        code — we forge the industry leaders. Operating as an elite training division of Aspirentech
+                        Business Solutions, we bridge the dangerous gap between academic theory and cutting-edge
+                        industry demands.</p>
+                    <p class="text-muted mb-4" style="line-height:1.9;">We recognized that traditional education often
+                        lags behind the hyper-speed of technological advancement. To solve this critical problem, we
+                        engineered an immersive, AI-first ecosystem where learners are treated as developers from day
+                        one. Our intensive environment transforms raw passion into strategic technical expertise,
+                        creating professionals who don't just find jobs — they define the future of technology.</p>
+                    <p class="text-muted" style="line-height:1.9;">Founded under the banner of Aspirentech Business
+                        Solutions in Krishnagiri, Tamil Nadu, ABS Academy has been quietly becoming the most
+                        results-oriented tech training center in the region. Every batch we train is a batch that gets
+                        placed. That is not a promise. That is our track record.</p>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="overflow-hidden rounded-5 shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="Collaborative Learning at ABS Academy" class="img-fluid w-100" style="object-fit:cover;max-height:480px;">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
+                            alt="Collaborative Learning at ABS Academy" class="img-fluid w-100"
+                            style="object-fit:cover;max-height:480px;">
                     </div>
                 </div>
             </div>
@@ -125,28 +162,40 @@
     <section class="py-5 bg-white border-bottom">
         <div class="container py-lg-5">
             <div class="text-center mb-5" data-aos="fade-up">
-                <span class="text-success fw-bold text-uppercase small" style="letter-spacing:1px;">Our Foundation</span>
+                <span class="text-success fw-bold text-uppercase small" style="letter-spacing:1px;">Our
+                    Foundation</span>
                 <h2 class="display-5 fw-bold text-dark mt-2">Vision & <span class="text-gradient">Mission</span></h2>
             </div>
             <div class="row g-4">
                 <div class="col-md-6" data-aos="fade-right">
                     <div class="p-4 p-md-5 bg-soft-green rounded-5 h-100 border">
-                        <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center mb-4" style="width:60px;height:60px;">
+                        <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center mb-4"
+                            style="width:60px;height:60px;">
                             <i class="bi bi-bullseye fs-4"></i>
                         </div>
                         <h4 class="fw-bold text-dark mb-3">Our Vision</h4>
-                        <p class="text-muted" style="line-height:1.9;">To be the most respected and results-driven technology training institution in South India — a powerhouse that produces developers, designers, and digital strategists who are globally competitive, ethically grounded, and perpetually curious.</p>
-                        <p class="text-muted" style="line-height:1.9;">We envision a Tamil Nadu where every ambitious graduate has access to world-class technical education without having to leave their home state — where talent is not limited by geography.</p>
+                        <p class="text-muted" style="line-height:1.9;">To be the most respected and results-driven
+                            technology training institution in South India — a powerhouse that produces developers,
+                            designers, and digital strategists who are globally competitive, ethically grounded, and
+                            perpetually curious.</p>
+                        <p class="text-muted" style="line-height:1.9;">We envision a Tamil Nadu where every ambitious
+                            graduate has access to world-class technical education without having to leave their home
+                            state — where talent is not limited by geography.</p>
                     </div>
                 </div>
                 <div class="col-md-6" data-aos="fade-left">
                     <div class="p-4 p-md-5 bg-white rounded-5 h-100 shadow-sm border">
-                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mb-4" style="width:60px;height:60px;">
+                        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mb-4"
+                            style="width:60px;height:60px;">
                             <i class="bi bi-lightbulb fs-4"></i>
                         </div>
                         <h4 class="fw-bold text-dark mb-3">Our Mission</h4>
-                        <p class="text-muted" style="line-height:1.9;">To empower every student with practical, industry-aligned, AI-first technical education through intensive mentorship, real-world project experience, and an unbreakable commitment to placement success.</p>
-                        <p class="text-muted" style="line-height:1.9;">We operate on a simple principle: every student who enters ABS Academy must leave as a professional who can immediately contribute value to any technology team on day one.</p>
+                        <p class="text-muted" style="line-height:1.9;">To empower every student with practical,
+                            industry-aligned, AI-first technical education through intensive mentorship, real-world
+                            project experience, and an unbreakable commitment to placement success.</p>
+                        <p class="text-muted" style="line-height:1.9;">We operate on a simple principle: every student
+                            who enters ABS Academy must leave as a professional who can immediately contribute value to
+                            any technology team on day one.</p>
                     </div>
                 </div>
             </div>
@@ -157,51 +206,65 @@
     <section class="py-5 bg-light border-bottom">
         <div class="container py-lg-5">
             <div class="text-center mb-5" data-aos="fade-up">
-                <span class="text-success fw-bold text-uppercase small" style="letter-spacing:1px;">What Drives Us</span>
+                <span class="text-success fw-bold text-uppercase small" style="letter-spacing:1px;">What Drives
+                    Us</span>
                 <h2 class="display-5 fw-bold text-dark mt-2">Our Core <span class="text-gradient">Values</span></h2>
-                <p class="text-muted mx-auto col-md-7">These are the non-negotiable principles that govern every lesson, every mentor interaction, and every placement call we make.</p>
+                <p class="text-muted mx-auto col-md-7">These are the non-negotiable principles that govern every lesson,
+                    every mentor interaction, and every placement call we make.</p>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
                     <div class="p-4 bg-white rounded-5 shadow-sm border h-100 hover-lift transition-all">
                         <i class="bi bi-cpu-fill text-success fs-2 mb-3 d-block"></i>
                         <h5 class="fw-bold text-dark mb-2">AI-First Thinking</h5>
-                        <p class="text-muted small" style="line-height:1.8;">We don't teach AI as an afterthought. Every course, every project, and every evaluation is designed with the lens of how Artificial Intelligence is reshaping that specific industry.</p>
+                        <p class="text-muted small" style="line-height:1.8;">We don't teach AI as an afterthought. Every
+                            course, every project, and every evaluation is designed with the lens of how Artificial
+                            Intelligence is reshaping that specific industry.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="p-4 bg-white rounded-5 shadow-sm border h-100 hover-lift transition-all">
                         <i class="bi bi-people-fill text-primary fs-2 mb-3 d-block"></i>
                         <h5 class="fw-bold text-dark mb-2">Mentorship Over Lectures</h5>
-                        <p class="text-muted small" style="line-height:1.8;">Our mentors are active industry professionals — not career academics. Every student gets personal attention, code reviews, and career roadmapping sessions throughout their journey.</p>
+                        <p class="text-muted small" style="line-height:1.8;">Our mentors are active industry
+                            professionals — not career academics. Every student gets personal attention, code reviews,
+                            and career roadmapping sessions throughout their journey.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="p-4 bg-white rounded-5 shadow-sm border h-100 hover-lift transition-all">
                         <i class="bi bi-hammer text-warning fs-2 mb-3 d-block"></i>
                         <h5 class="fw-bold text-dark mb-2">Build, Don't Just Learn</h5>
-                        <p class="text-muted small" style="line-height:1.8;">Students ship real products. From week one, you are building. By graduation, you have a portfolio of 5+ deployable projects that demonstrate professional-grade technical skill.</p>
+                        <p class="text-muted small" style="line-height:1.8;">Students ship real products. From week one,
+                            you are building. By graduation, you have a portfolio of 5+ deployable projects that
+                            demonstrate professional-grade technical skill.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
                     <div class="p-4 bg-white rounded-5 shadow-sm border h-100 hover-lift transition-all">
                         <i class="bi bi-briefcase-fill text-info fs-2 mb-3 d-block"></i>
                         <h5 class="fw-bold text-dark mb-2">Placement as a Promise</h5>
-                        <p class="text-muted small" style="line-height:1.8;">We don't hand you a certificate and wish you luck. Our dedicated placement cell works aggressively with 100+ hiring partners until every qualified graduate has a confirmed offer letter.</p>
+                        <p class="text-muted small" style="line-height:1.8;">We don't hand you a certificate and wish
+                            you luck. Our dedicated placement cell works aggressively with 100+ hiring partners until
+                            every qualified graduate has a confirmed offer letter.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="p-4 bg-white rounded-5 shadow-sm border h-100 hover-lift transition-all">
                         <i class="bi bi-arrow-repeat text-danger fs-2 mb-3 d-block"></i>
                         <h5 class="fw-bold text-dark mb-2">Always Current Curriculum</h5>
-                        <p class="text-muted small" style="line-height:1.8;">Technology evolves daily. Our curriculum committee reviews and updates every module quarterly, ensuring your skills are always relevant to the most current industry requirements.</p>
+                        <p class="text-muted small" style="line-height:1.8;">Technology evolves daily. Our curriculum
+                            committee reviews and updates every module quarterly, ensuring your skills are always
+                            relevant to the most current industry requirements.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="p-4 bg-white rounded-5 shadow-sm border h-100 hover-lift transition-all">
                         <i class="bi bi-heart-fill text-success fs-2 mb-3 d-block"></i>
                         <h5 class="fw-bold text-dark mb-2">Inclusive Excellence</h5>
-                        <p class="text-muted small" style="line-height:1.8;">We believe talent has no boundaries. Whether you're a fresh graduate or a career changer, our flexible hybrid program is designed to accommodate your life while not compromising on intensity.</p>
+                        <p class="text-muted small" style="line-height:1.8;">We believe talent has no boundaries.
+                            Whether you're a fresh graduate or a career changer, our flexible hybrid program is designed
+                            to accommodate your life while not compromising on intensity.</p>
                     </div>
                 </div>
             </div>
@@ -213,35 +276,51 @@
         <div class="container py-lg-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5" data-aos="fade-right">
-                    <span class="text-success fw-bold text-uppercase small" style="letter-spacing:1px;">The Difference</span>
-                    <h2 class="display-5 fw-bold text-dark mt-2 mb-4">Why ABS Academy is <span class="text-gradient">Different</span></h2>
-                    <p class="text-muted mb-5" style="line-height:1.9;">Most academies teach you. We transform you. The difference is not the syllabus — it's the philosophy. We treat every student as a future team member of a top tech company, and we train accordingly.</p>
+                    <span class="text-success fw-bold text-uppercase small" style="letter-spacing:1px;">The
+                        Difference</span>
+                    <h2 class="display-5 fw-bold text-dark mt-2 mb-4">Why ABS Academy is <span
+                            class="text-gradient">Different</span></h2>
+                    <p class="text-muted mb-5" style="line-height:1.9;">Most academies teach you. We transform you. The
+                        difference is not the syllabus — it's the philosophy. We treat every student as a future team
+                        member of a top tech company, and we train accordingly.</p>
                     <div class="d-flex flex-column gap-3">
                         <div class="d-flex align-items-start gap-3">
                             <i class="bi bi-check-circle-fill text-success fs-5 mt-1 flex-shrink-0"></i>
-                            <div><strong class="text-dark">Live Industry Projects</strong><br><span class="text-muted small">Work on real client briefs sourced from our network of 100+ partner companies.</span></div>
+                            <div><strong class="text-dark">Live Industry Projects</strong><br><span
+                                    class="text-muted small">Work on real client briefs sourced from our network of 100+
+                                    partner companies.</span></div>
                         </div>
                         <div class="d-flex align-items-start gap-3">
                             <i class="bi bi-check-circle-fill text-success fs-5 mt-1 flex-shrink-0"></i>
-                            <div><strong class="text-dark">Hackathon-Driven Learning</strong><br><span class="text-muted small">Weekly sprints and monthly hackathons that simulate real startup pressure and teamwork.</span></div>
+                            <div><strong class="text-dark">Hackathon-Driven Learning</strong><br><span
+                                    class="text-muted small">Weekly sprints and monthly hackathons that simulate real
+                                    startup pressure and teamwork.</span></div>
                         </div>
                         <div class="d-flex align-items-start gap-3">
                             <i class="bi bi-check-circle-fill text-success fs-5 mt-1 flex-shrink-0"></i>
-                            <div><strong class="text-dark">Mock Interview Circuit</strong><br><span class="text-muted small">Rigorous bi-weekly mock technical and HR interviews with detailed performance feedback.</span></div>
+                            <div><strong class="text-dark">Mock Interview Circuit</strong><br><span
+                                    class="text-muted small">Rigorous bi-weekly mock technical and HR interviews with
+                                    detailed performance feedback.</span></div>
                         </div>
                         <div class="d-flex align-items-start gap-3">
                             <i class="bi bi-check-circle-fill text-success fs-5 mt-1 flex-shrink-0"></i>
-                            <div><strong class="text-dark">Hybrid Flexibility</strong><br><span class="text-muted small">Attend physically at our Krishnagiri campus or join live-streamed sessions from anywhere in India.</span></div>
+                            <div><strong class="text-dark">Hybrid Flexibility</strong><br><span
+                                    class="text-muted small">Attend physically at our Krishnagiri campus or join
+                                    live-streamed sessions from anywhere in India.</span></div>
                         </div>
                         <div class="d-flex align-items-start gap-3">
                             <i class="bi bi-check-circle-fill text-success fs-5 mt-1 flex-shrink-0"></i>
-                            <div><strong class="text-dark">Lifetime Alumni Network</strong><br><span class="text-muted small">Join an exclusive network of ABS Academy graduates for jobs, collaborations, and mentorship.</span></div>
+                            <div><strong class="text-dark">Lifetime Alumni Network</strong><br><span
+                                    class="text-muted small">Join an exclusive network of ABS Academy graduates for
+                                    jobs, collaborations, and mentorship.</span></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-7" data-aos="fade-left">
                     <div class="overflow-hidden rounded-5 shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80" alt="Students at ABS Academy working on projects" class="img-fluid w-100" style="object-fit:cover;max-height:520px;">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80"
+                            alt="Students at ABS Academy working on projects" class="img-fluid w-100"
+                            style="object-fit:cover;max-height:520px;">
                     </div>
                 </div>
             </div>
@@ -251,8 +330,10 @@
     <!-- CTA Banner -->
     <section class="py-5 bg-soft-green text-center">
         <div class="container py-lg-4" data-aos="fade-up">
-            <h2 class="display-5 fw-bold text-dark mb-3">Ready to Join the <span class="text-gradient">ABS Family?</span></h2>
-            <p class="lead text-muted mb-5 col-md-7 mx-auto">Your journey from learner to industry professional starts with a single decision. Make it today.</p>
+            <h2 class="display-5 fw-bold text-dark mb-3">Ready to Join the <span class="text-gradient">ABS
+                    Family?</span></h2>
+            <p class="lead text-muted mb-5 col-md-7 mx-auto">Your journey from learner to industry professional starts
+                with a single decision. Make it today.</p>
             <div class="d-flex justify-content-center gap-3 flex-wrap">
                 <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg">Apply Now</a>
                 <a href="courses.html" class="btn btn-outline-dark btn-lg rounded-pill px-5">Explore Courses</a>
@@ -264,7 +345,7 @@
     <footer class="footer-section pt-5 pb-4">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="mb-4">
                         <a href="index.html">
                             <img src="logo23.png" alt="ABS Academy Logo" style="height: 70px; object-fit: contain;">
@@ -281,7 +362,7 @@
                                 class="bi bi-instagram"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-6">
                     <h6 class="footer-title">Quick Links</h6>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none small">About Us</a>
@@ -289,16 +370,19 @@
                         <li class="mb-2"><a href="courses.html"
                                 class="text-muted text-decoration-none small">Courses</a>
                         </li>
-                        <li class="mb-2"><a href="workshops.html" class="text-muted text-decoration-none small">Workshops</a></li>
-                        <li class="mb-2"><a href="summer-camp.html" class="text-muted text-decoration-none small">Summer Camp</a></li>
-                        <li class="mb-2"><a href="careers.html" class="text-muted text-decoration-none small">Careers</a></li>
-                        
+                        <li class="mb-2"><a href="workshops.html"
+                                class="text-muted text-decoration-none small">Workshops</a></li>
+                        <li class="mb-2"><a href="summer-camp.html" class="text-muted text-decoration-none small">Summer
+                                Camp</a></li>
+                        <li class="mb-2"><a href="careers.html"
+                                class="text-muted text-decoration-none small">Careers</a></li>
+
                         <li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none small">Contact
                                 Us</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-6">
                     <h6 class="footer-title">Legal</h6>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="terms-conditions.html"
@@ -307,7 +391,7 @@
                                 class="text-muted text-decoration-none small">Privacy Policy</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <h6 class="footer-title">Contact Us</h6>
                     <div class="contact-info-list mt-4">
                         <div class="contact-info-item">
@@ -351,9 +435,14 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="main.js"></script>
+    
+    
+    <div class="whatsapp-float"><a href="https://wa.me/+919750359750" class="whatsapp-icon" target="_blank"><i
+                class="bi bi-whatsapp"></i></a></div>
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <div class="whatsapp-float"><a href="https://wa.me/+919750359750" class="whatsapp-icon" target="_blank"><i class="bi bi-whatsapp"></i></a></div>
-    <script>AOS.init({ duration: 800, once: true, offset: 100 });</script>
+    <script src="main.js"></script>
 </body>
+
 </html>
+

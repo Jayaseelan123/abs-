@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Stack Development Course | ABS Academy</title>
     <!-- Google Fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -17,62 +19,82 @@
 
 <body>
 
-        <!-- Navbar -->
+                <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-glass py-2">
-        <div class="container">
+        <div class="container d-flex align-items-center justify-content-between">
             <a class="navbar-brand text-decoration-none" href="index.html">
-                <img src="logo23.png" alt="ABS Academy Logo" style="height: 60px; object-fit: contain;">
+                <img src="logo23.png" alt="ABS Academy Logo" style="height: 60px; max-width: 150px; object-fit: contain;">
             </a>
             <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
                     <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="index.html">Home</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="about.html">About</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="about.html">About</a>
+                    </li>
                     <li class="nav-item dropdown mx-2">
-                        <a class="nav-link dropdown-toggle fw-semibold text-muted" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle fw-semibold text-muted" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Course
                         </a>
                         <ul class="dropdown-menu border-0 shadow-lg p-3 rounded-4" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="ai-development.html">AI Development</a></li>
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="ai-automations.html">AI Automations</a></li>
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="digital-marketing-ai.html">Digital Marketing with AI</a></li>
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="web-development.html">Web Development</a></li>
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="full-stack-development.html">Full Stack Development</a></li>
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="graphic-design.html">Graphic Design</a></li>
-                            <li><hr class="dropdown-divider opacity-10"></li>
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-bold small text-primary" href="courses.html">View All Courses</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1"
+                                    href="ai-development.html">AI Development</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1"
+                                    href="ai-automations.html">AI Automations</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1"
+                                    href="digital-marketing-ai.html">Digital Marketing with AI</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1"
+                                    href="web-development.html">Web Development</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1"
+                                    href="full-stack-development.html">Full Stack Development</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1"
+                                    href="graphic-design.html">Graphic Design</a></li>
+                            <li>
+                                <hr class="dropdown-divider opacity-10">
+                            </li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-bold small text-primary"
+                                    href="courses.html">View All Courses</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="workshops.html">Workshops</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="summer-camp.html">Summer Camp</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="careers.html">Careers</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted"
+                            href="workshops.html">Workshops</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="summer-camp.html">Summer
+                            Camp</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="careers.html">Careers</a>
+                    </li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="contact.html">Contact
+                            Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Course Hero -->
-    <header class="bg-soft-blue-gradient py-4 mt-5  border-bottom position-relative overflow-hidden">
-        
+    <header class="bg-soft-blue-gradient py-4  border-bottom position-relative overflow-hidden">
+
         <div class="container pt-lg-5 text-center position-relative">
             <div class="row align-items-center g-5">
                 <div class="col-lg-7 text-start">
-                    
-            <span class="badge bg-soft-blue text-primary px-3 py-2 rounded-pill fw-bold mb-3 shadow-sm" data-aos="fade-down">Mastery Program</span>
-            <h1 class="display-4 fw-800 text-dark mb-3" data-aos="fade-up">Full Stack <span class="text-gradient">Development</span></h1>
-            <p class="lead text-secondary  col-lg-10" data-aos="fade-up" data-aos-delay="100">Go from idea to production. High-intensity program covering both React (Frontend) and Node.js (Backend).</p>
-            <div class="mt-4" data-aos="fade-up" data-aos-delay="200">
-                <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg">Begin Your Mastery</a>
-            </div>
-        
+
+                    <span class="badge bg-soft-blue text-primary px-3 py-2 rounded-pill fw-bold mb-3 shadow-sm"
+                        data-aos="fade-down">Mastery Program</span>
+                    <h1 class="display-4 fw-800 text-dark mb-3" data-aos="fade-up">Full Stack <span
+                            class="text-gradient">Development</span></h1>
+                    <p class="lead text-secondary  col-lg-10" data-aos="fade-up" data-aos-delay="100">Go from idea to
+                        production. High-intensity program covering both React (Frontend) and Node.js (Backend).</p>
+                    <div class="mt-4" data-aos="fade-up" data-aos-delay="200">
+                        <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg">Begin Your
+                            Mastery</a>
+                    </div>
+
                 </div>
                 <div class="col-lg-5 text-center position-relative">
                     <div class="hero-image-card" data-aos="zoom-in" data-aos-delay="300">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Hero Image" class="img-fluid rounded-4 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
+                            alt="Hero Image" class="img-fluid rounded-4 shadow-lg">
                     </div>
                 </div>
             </div>
@@ -85,11 +107,15 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-6" data-aos="fade-right">
                     <h2 class="display-5 fw-bold text-dark mb-4">Course <span class="text-gradient">Overview</span></h2>
-                    <p class="lead text-secondary mb-4">The Full Stack Development course is our most comprehensive track, designed to create engineers who can handle every layer of a modern application.</p>
-                    <p class="text-muted">You will master the MERN stack (MongoDB, Express, React, Node.js), while learning professional software engineering practices including version control with Git, API documentation, and cloud deployment. This is built for those who want to build the future.</p>
+                    <p class="lead text-secondary mb-4">The Full Stack Development course is our most comprehensive
+                        track, designed to create engineers who can handle every layer of a modern application.</p>
+                    <p class="text-muted">You will master the MERN stack (MongoDB, Express, React, Node.js), while
+                        learning professional software engineering practices including version control with Git, API
+                        documentation, and cloud deployment. This is built for those who want to build the future.</p>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80" alt="Full Stack Development" class="img-fluid rounded-5 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80"
+                        alt="Full Stack Development" class="img-fluid rounded-5 shadow-lg">
                 </div>
             </div>
         </div>
@@ -105,19 +131,24 @@
                 <div class="col-md-4" data-aos="fade-up">
                     <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-top border-4 border-primary">
                         <h5 class="fw-bold mb-3"><i class="bi bi-stack text-primary me-2"></i>MERN Stack</h5>
-                        <p class="small text-muted mb-0">Complete mastery of MongoDB, Express.js, React.js, and Node.js ecosystem.</p>
+                        <p class="small text-muted mb-0">Complete mastery of MongoDB, Express.js, React.js, and Node.js
+                            ecosystem.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-top border-4 border-success">
-                        <h5 class="fw-bold mb-3"><i class="bi bi-shield-lock-fill text-success me-2"></i>Auth & Security</h5>
-                        <p class="small text-muted mb-0">Implement complex authentication systems using JWT and secure API architectures.</p>
+                        <h5 class="fw-bold mb-3"><i class="bi bi-shield-lock-fill text-success me-2"></i>Auth & Security
+                        </h5>
+                        <p class="small text-muted mb-0">Implement complex authentication systems using JWT and secure
+                            API architectures.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-top border-4 border-info">
-                        <h5 class="fw-bold mb-3"><i class="bi bi-cloud-arrow-up text-info me-2"></i>Cloud Deployment</h5>
-                        <p class="small text-muted mb-0">Learn to deploy, manage, and scale your applications on AWS or Heroku.</p>
+                        <h5 class="fw-bold mb-3"><i class="bi bi-cloud-arrow-up text-info me-2"></i>Cloud Deployment
+                        </h5>
+                        <p class="small text-muted mb-0">Learn to deploy, manage, and scale your applications on AWS or
+                            Heroku.</p>
                     </div>
                 </div>
             </div>
@@ -129,12 +160,24 @@
         <div class="container">
             <h2 class="display-6 fw-bold text-dark mb-5">Tools <span class="text-gradient">Covered</span></h2>
             <div class="row row-cols-3 row-cols-md-6 g-4 justify-content-center">
-                <div class="col"><div class="p-2 border rounded-pill bg-light">React</div></div>
-                <div class="col"><div class="p-2 border rounded-pill bg-light">NodeJS</div></div>
-                <div class="col"><div class="p-2 border rounded-pill bg-light">Express</div></div>
-                <div class="col"><div class="p-2 border rounded-pill bg-light">MongoDB</div></div>
-                <div class="col"><div class="p-2 border rounded-pill bg-light">AWS</div></div>
-                <div class="col"><div class="p-2 border rounded-pill bg-light">Docker</div></div>
+                <div class="col">
+                    <div class="p-2 border rounded-pill bg-light">React</div>
+                </div>
+                <div class="col">
+                    <div class="p-2 border rounded-pill bg-light">NodeJS</div>
+                </div>
+                <div class="col">
+                    <div class="p-2 border rounded-pill bg-light">Express</div>
+                </div>
+                <div class="col">
+                    <div class="p-2 border rounded-pill bg-light">MongoDB</div>
+                </div>
+                <div class="col">
+                    <div class="p-2 border rounded-pill bg-light">AWS</div>
+                </div>
+                <div class="col">
+                    <div class="p-2 border rounded-pill bg-light">Docker</div>
+                </div>
             </div>
         </div>
     </section>
@@ -149,13 +192,15 @@
                 <div class="col-md-6" data-aos="fade-right">
                     <div class="p-4 bg-white rounded-4 shadow-sm h-100 border hover-lift transition-all">
                         <h4 class="fw-bold text-primary mb-3">#01 SaaS Dashboard</h4>
-                        <p class="text-muted">Build a complete software-as-a-service dashboard with CRUD operations and dynamic charts.</p>
+                        <p class="text-muted">Build a complete software-as-a-service dashboard with CRUD operations and
+                            dynamic charts.</p>
                     </div>
                 </div>
                 <div class="col-md-6" data-aos="fade-left">
                     <div class="p-4 bg-white rounded-4 shadow-sm h-100 border hover-lift transition-all">
                         <h4 class="fw-bold text-success mb-3">#02 Real-time Chat App</h4>
-                        <p class="text-muted">Engineer a production-ready messaging platform using WebSockets and Socket.io.</p>
+                        <p class="text-muted">Engineer a production-ready messaging platform using WebSockets and
+                            Socket.io.</p>
                     </div>
                 </div>
             </div>
@@ -165,17 +210,20 @@
     <!-- Duration & More -->
     <section class="py-5 bg-white border-bottom">
         <div class="container text-center">
-             <div class="row g-5 text-start">
+            <div class="row g-5 text-start">
                 <div class="col-md-6" data-aos="fade-up">
                     <div class="p-4 bg-light rounded-4 border h-100">
                         <h3 class="fw-bold mb-4">Duration & Fees</h3>
                         <p class="mb-2"><strong>Duration:</strong> 16 Weeks (Intensive Bootcamp)</p>
                         <p class="mb-4"><strong>Investment:</strong> ₹45,000 (Installment plan available)</p>
                         <h3 class="fw-bold mb-3 mt-5">Who Can Join</h3>
-                         <ul class="list-unstyled">
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Aspiring Engineers</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Tech Founders</li>
-                             <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Final Year Students</li>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Aspiring
+                                Engineers</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Tech Founders
+                            </li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Final Year
+                                Students</li>
                         </ul>
                     </div>
                 </div>
@@ -190,7 +238,7 @@
                         </div>
                     </div>
                 </div>
-             </div>
+            </div>
         </div>
     </section>
 
@@ -198,7 +246,7 @@
     <footer class="footer-section pt-5 pb-4">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="mb-4">
                         <a href="index.html">
                             <img src="logo23.png" alt="ABS Academy Logo" style="height: 70px; object-fit: contain;">
@@ -215,7 +263,7 @@
                                 class="bi bi-instagram"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-6">
                     <h6 class="footer-title">Quick Links</h6>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none small">About Us</a>
@@ -223,16 +271,19 @@
                         <li class="mb-2"><a href="courses.html"
                                 class="text-muted text-decoration-none small">Courses</a>
                         </li>
-                        <li class="mb-2"><a href="workshops.html" class="text-muted text-decoration-none small">Workshops</a></li>
-                        <li class="mb-2"><a href="summer-camp.html" class="text-muted text-decoration-none small">Summer Camp</a></li>
-                        <li class="mb-2"><a href="careers.html" class="text-muted text-decoration-none small">Careers</a></li>
-                        
+                        <li class="mb-2"><a href="workshops.html"
+                                class="text-muted text-decoration-none small">Workshops</a></li>
+                        <li class="mb-2"><a href="summer-camp.html" class="text-muted text-decoration-none small">Summer
+                                Camp</a></li>
+                        <li class="mb-2"><a href="careers.html"
+                                class="text-muted text-decoration-none small">Careers</a></li>
+
                         <li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none small">Contact
                                 Us</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-6">
                     <h6 class="footer-title">Legal</h6>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="terms-conditions.html"
@@ -241,7 +292,7 @@
                                 class="text-muted text-decoration-none small">Privacy Policy</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <h6 class="footer-title">Contact Us</h6>
                     <div class="contact-info-list mt-4">
                         <div class="contact-info-item">
@@ -286,12 +337,18 @@
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 800, once: true });</script>
+    
+    
     <!-- WhatsApp Floating Button -->
     <div class="whatsapp-float">
-        <a href="https://wa.me/+919750359750" class="whatsapp-icon" target="_blank" aria-label="Contact us on WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://wa.me/+919750359750" class="whatsapp-icon" target="_blank"
+            aria-label="Contact us on WhatsApp"><i class="bi bi-whatsapp"></i></a>
     </div>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js"></script>
 </body>
+
 </html>
+
+

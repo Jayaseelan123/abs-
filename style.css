@@ -15,12 +15,15 @@
     /* Logo 'b' Teal */
     --glass-bg: rgba(255, 255, 255, 0.85);
     --shadow-premium: 0 20px 40px rgba(0, 0, 0, 0.05);
+    --shadow-soft: 0 10px 30px rgba(0,0,0,0.05);
+    --shadow-hover: 0 20px 40px rgba(0,0,0,0.1);
+    --transition-premium: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     --radius-lg: 1.5rem;
     --radius-xl: 2rem;
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Poppins', 'Open Sans', sans-serif;
     font-size: 1.05rem;
     line-height: 1.6;
     color: var(--text-dark);
@@ -35,17 +38,36 @@ h4,
 h5,
 h6,
 .navbar-brand {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', 'Open Sans', sans-serif;
     letter-spacing: -0.02em;
 }
 
 .display-3 {
-    font-size: 4.5rem;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
     font-weight: 800;
 }
 
+.display-4 {
+    font-size: clamp(2.2rem, 7vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+header h1,
+.hero-section h1 {
+    font-weight: 800 !important;
+}
+
+.hero-section,
+body > header:first-of-type,
+header.bg-soft-blue-gradient,
+header.bg-soft-green,
+header.bg-white.border-bottom {
+    margin-top: 85px !important;
+}
+
 .display-5 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
 }
 
@@ -315,15 +337,15 @@ p,
 .course-card-custom {
     padding: 3rem 2.5rem;
     background: white;
-    border-radius: 1.5rem;
+    border-radius: var(--radius-lg);
     border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.01);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-premium);
 }
 
 .course-card-custom:hover {
     transform: translateY(-12px);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-hover);
     border-color: var(--primary-color);
 }
 
@@ -349,40 +371,47 @@ p,
     background-size: 200% auto;
     border: none;
     color: white !important;
-    transition: all 0.4s ease;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition-premium);
 }
 
 .btn-primary:hover {
     background-position: right center;
-    transform: translateY(-3px);
-    box-shadow: 0 15px 25px rgba(38, 185, 119, 0.35);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
 }
 
 .btn-outline-primary {
     border-width: 2px;
     color: var(--primary-color);
     border-color: var(--primary-color);
-    transition: all 0.3s ease;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition-premium);
 }
 
 .btn-outline-primary:hover {
     background-color: var(--primary-color);
     color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(43, 123, 184, 0.2);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
 }
 
 /* PAP Section */
 .pap-step-card {
     background: white;
     border-radius: var(--radius-lg);
-    transition: all 0.3s ease;
+    transition: var(--transition-premium);
     border: 1px solid rgba(0, 0, 0, 0.03) !important;
+    box-shadow: var(--shadow-soft);
 }
 
 .pap-step-card:hover {
     transform: translateY(-10px);
-    box-shadow: var(--shadow-premium);
+    box-shadow: var(--shadow-hover);
 }
 
 .step-number {
@@ -637,21 +666,35 @@ p,
         padding-bottom: 4rem !important;
     }
 
-    .hero-section {
-        padding-top: 2rem;
+    .hero-section, 
+    header.position-relative,
+    header.bg-soft-blue-gradient,
+    header.bg-soft-green,
+    header.bg-white.border-bottom {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+        margin-top: 75px !important; /* Account for navbar on mobile */
         text-align: center !important;
     }
 
-    .hero-section .text-start {
+    .hero-section .text-start,
+    header.position-relative .text-start {
         text-align: center !important;
     }
 
-    .hero-section .d-flex {
+    .hero-section .d-flex,
+    header.position-relative .d-flex {
         justify-content: center !important;
     }
 
     .hero-image-card {
-        margin-top: 4rem;
+        margin-top: 3rem;
+    }
+
+    .hero-image-card img {
+        height: auto !important;
+        max-height: 350px;
+        object-fit: cover;
     }
 
     .navbar-brand img {
@@ -665,6 +708,13 @@ p,
 
     .footer-section {
         text-align: center;
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    .footer-section .col-lg-4,
+    .footer-section .col-lg-2 {
+        margin-bottom: 2rem;
     }
 
     .footer-section .social-icon {

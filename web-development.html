@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Development Course | ABS Academy</title>
     <!-- Google Fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -17,62 +19,83 @@
 
 <body>
 
-        <!-- Navbar -->
+                <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-glass py-2">
-        <div class="container">
+        <div class="container d-flex align-items-center justify-content-between">
             <a class="navbar-brand text-decoration-none" href="index.html">
-                <img src="logo23.png" alt="ABS Academy Logo" style="height: 60px; object-fit: contain;">
+                <img src="logo23.png" alt="ABS Academy Logo" style="height: 60px; max-width: 150px; object-fit: contain;">
             </a>
             <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
                     <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="index.html">Home</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="about.html">About</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="about.html">About</a>
+                    </li>
                     <li class="nav-item dropdown mx-2">
-                        <a class="nav-link dropdown-toggle fw-semibold text-muted" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle fw-semibold text-muted" href="#" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Course
                         </a>
                         <ul class="dropdown-menu border-0 shadow-lg p-3 rounded-4" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="ai-development.html">AI Development</a></li>
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="ai-automations.html">AI Automations</a></li>
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="digital-marketing-ai.html">Digital Marketing with AI</a></li>
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="web-development.html">Web Development</a></li>
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="full-stack-development.html">Full Stack Development</a></li>
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="graphic-design.html">Graphic Design</a></li>
-                            <li><hr class="dropdown-divider opacity-10"></li>
-                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-bold small text-primary" href="courses.html">View All Courses</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1"
+                                    href="ai-development.html">AI Development</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1"
+                                    href="ai-automations.html">AI Automations</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1"
+                                    href="digital-marketing-ai.html">Digital Marketing with AI</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1"
+                                    href="web-development.html">Web Development</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1"
+                                    href="full-stack-development.html">Full Stack Development</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1"
+                                    href="graphic-design.html">Graphic Design</a></li>
+                            <li>
+                                <hr class="dropdown-divider opacity-10">
+                            </li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-bold small text-primary"
+                                    href="courses.html">View All Courses</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="workshops.html">Workshops</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="summer-camp.html">Summer Camp</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="careers.html">Careers</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted"
+                            href="workshops.html">Workshops</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="summer-camp.html">Summer
+                            Camp</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="careers.html">Careers</a>
+                    </li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="contact.html">Contact
+                            Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Course Hero -->
-    <header class="bg-soft-blue-gradient py-4 mt-5  border-bottom position-relative overflow-hidden">
-        
+    <header class="bg-soft-blue-gradient py-4  border-bottom position-relative overflow-hidden">
+
         <div class="container pt-lg-5 text-center position-relative">
             <div class="row align-items-center g-5">
                 <div class="col-lg-7 text-start">
-                    
-            <span class="badge bg-soft-blue text-primary px-3 py-2 rounded-pill fw-bold mb-3 shadow-sm" data-aos="fade-down">Frontend Specialist</span>
-            <h1 class="display-4 fw-800 text-dark mb-3" data-aos="fade-up">Web <span class="text-gradient">Development</span></h1>
-            <p class="lead text-secondary  col-lg-10" data-aos="fade-up" data-aos-delay="100">Master the building blocks of the web and learn to create stunning, interactive, and responsive websites from scratch.</p>
-            <div class="mt-4" data-aos="fade-up" data-aos-delay="200">
-                <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg">Become a Developer</a>
-            </div>
-        
+
+                    <span class="badge bg-soft-blue text-primary px-3 py-2 rounded-pill fw-bold mb-3 shadow-sm"
+                        data-aos="fade-down">Frontend Specialist</span>
+                    <h1 class="display-4 fw-800 text-dark mb-3" data-aos="fade-up">Web <span
+                            class="text-gradient">Development</span></h1>
+                    <p class="lead text-secondary  col-lg-10" data-aos="fade-up" data-aos-delay="100">Master the
+                        building blocks of the web and learn to create stunning, interactive, and responsive websites
+                        from scratch.</p>
+                    <div class="mt-4" data-aos="fade-up" data-aos-delay="200">
+                        <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg">Become a
+                            Developer</a>
+                    </div>
+
                 </div>
                 <div class="col-lg-5 text-center position-relative">
                     <div class="hero-image-card" data-aos="zoom-in" data-aos-delay="300">
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Hero Image" class="img-fluid rounded-4 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+                            alt="Hero Image" class="img-fluid rounded-4 shadow-lg">
                     </div>
                 </div>
             </div>
@@ -85,11 +108,16 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-6" data-aos="fade-right">
                     <h2 class="display-5 fw-bold text-dark mb-4">Course <span class="text-gradient">Overview</span></h2>
-                    <p class="lead text-secondary mb-4">The Web Development course is built to take you from a curious learner to a professional who can build websites that work everywhere. We focus on state-of-the-art frontend technologies and best practices.</p>
-                    <p class="text-muted">You will learn to create modern user interfaces using HTML5, CSS3, and JavaScript, while mastering CSS frameworks like Bootstrap and learning the core of modern JavaScript frameworks.</p>
+                    <p class="lead text-secondary mb-4">The Web Development course is built to take you from a curious
+                        learner to a professional who can build websites that work everywhere. We focus on
+                        state-of-the-art frontend technologies and best practices.</p>
+                    <p class="text-muted">You will learn to create modern user interfaces using HTML5, CSS3, and
+                        JavaScript, while mastering CSS frameworks like Bootstrap and learning the core of modern
+                        JavaScript frameworks.</p>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1498050101023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Web Development" class="img-fluid rounded-5 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1498050101023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+                        alt="Web Development" class="img-fluid rounded-5 shadow-lg">
                 </div>
             </div>
         </div>
@@ -104,20 +132,24 @@
             <div class="row g-4">
                 <div class="col-md-4" data-aos="fade-up">
                     <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-top border-4 border-primary">
-                        <h5 class="fw-bold mb-3"><i class="bi bi-filetype-html text-primary me-2"></i>Structured HTML5</h5>
-                        <p class="small text-muted mb-0">Learn semantic HTML for accessible and SEO-friendly document structure across any platform.</p>
+                        <h5 class="fw-bold mb-3"><i class="bi bi-filetype-html text-primary me-2"></i>Structured HTML5
+                        </h5>
+                        <p class="small text-muted mb-0">Learn semantic HTML for accessible and SEO-friendly document
+                            structure across any platform.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-top border-4 border-success">
                         <h5 class="fw-bold mb-3"><i class="bi bi-brush-fill text-success me-2"></i>Advanced CSS3</h5>
-                        <p class="small text-muted mb-0">Master layouts with Flexbox and Grid, while implementing advanced styling with SASS and Bootstrap.</p>
+                        <p class="small text-muted mb-0">Master layouts with Flexbox and Grid, while implementing
+                            advanced styling with SASS and Bootstrap.</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="p-4 bg-white rounded-4 shadow-sm h-100 border-top border-4 border-info">
                         <h5 class="fw-bold mb-3"><i class="bi bi-braces text-info me-2"></i>JavaScript (ES6+)</h5>
-                        <p class="small text-muted mb-0">Learn core logic and DOM manipulation to create interactive experiences that wow users.</p>
+                        <p class="small text-muted mb-0">Learn core logic and DOM manipulation to create interactive
+                            experiences that wow users.</p>
                     </div>
                 </div>
             </div>
@@ -149,13 +181,15 @@
                 <div class="col-md-6" data-aos="fade-right">
                     <div class="p-4 bg-white rounded-4 shadow-sm h-100 border hover-lift transition-all">
                         <h4 class="fw-bold text-primary mb-3">#01 Portfolio Page</h4>
-                        <p class="text-muted">A fully responsive and highly animated portfolio page to showcase your talent to potential employers.</p>
+                        <p class="text-muted">A fully responsive and highly animated portfolio page to showcase your
+                            talent to potential employers.</p>
                     </div>
                 </div>
                 <div class="col-md-6" data-aos="fade-left">
                     <div class="p-4 bg-white rounded-4 shadow-sm h-100 border hover-lift transition-all">
                         <h4 class="fw-bold text-success mb-3">#02 Landing Page Lab</h4>
-                        <p class="text-muted">High-converting marketing lander built from scratch with custom animations and interactive elements.</p>
+                        <p class="text-muted">High-converting marketing lander built from scratch with custom animations
+                            and interactive elements.</p>
                     </div>
                 </div>
             </div>
@@ -173,8 +207,10 @@
                         <p class="mb-4"><strong>Investment:</strong> ₹18,000 (Complete Package)</p>
                         <h3 class="fw-bold mb-3 mt-5">Who Can Join</h3>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Absolute Beginners</li>
-                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Designer looking to code</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Absolute
+                                Beginners</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Designer looking
+                                to code</li>
                             <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Students</li>
                         </ul>
                     </div>
@@ -183,10 +219,18 @@
                     <div class="p-4 bg-soft-blue rounded-4 border h-100">
                         <h3 class="fw-bold mb-4">Career Opportunities</h3>
                         <div class="row g-3">
-                            <div class="col-6"><div class="bg-white p-3 rounded-3 shadow-sm text-center">Frontend Developer</div></div>
-                            <div class="col-6"><div class="bg-white p-3 rounded-3 shadow-sm text-center">Web Designer</div></div>
-                            <div class="col-6"><div class="bg-white p-3 rounded-3 shadow-sm text-center">WordPress Expert</div></div>
-                            <div class="col-6"><div class="bg-white p-3 rounded-3 shadow-sm text-center">Freelance Dev</div></div>
+                            <div class="col-6">
+                                <div class="bg-white p-3 rounded-3 shadow-sm text-center">Frontend Developer</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="bg-white p-3 rounded-3 shadow-sm text-center">Web Designer</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="bg-white p-3 rounded-3 shadow-sm text-center">WordPress Expert</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="bg-white p-3 rounded-3 shadow-sm text-center">Freelance Dev</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -198,7 +242,7 @@
     <footer class="footer-section pt-5 pb-4">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="mb-4">
                         <a href="index.html">
                             <img src="logo23.png" alt="ABS Academy Logo" style="height: 70px; object-fit: contain;">
@@ -215,7 +259,7 @@
                                 class="bi bi-instagram"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-6">
                     <h6 class="footer-title">Quick Links</h6>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none small">About Us</a>
@@ -223,16 +267,19 @@
                         <li class="mb-2"><a href="courses.html"
                                 class="text-muted text-decoration-none small">Courses</a>
                         </li>
-                        <li class="mb-2"><a href="workshops.html" class="text-muted text-decoration-none small">Workshops</a></li>
-                        <li class="mb-2"><a href="summer-camp.html" class="text-muted text-decoration-none small">Summer Camp</a></li>
-                        <li class="mb-2"><a href="careers.html" class="text-muted text-decoration-none small">Careers</a></li>
-                        
+                        <li class="mb-2"><a href="workshops.html"
+                                class="text-muted text-decoration-none small">Workshops</a></li>
+                        <li class="mb-2"><a href="summer-camp.html" class="text-muted text-decoration-none small">Summer
+                                Camp</a></li>
+                        <li class="mb-2"><a href="careers.html"
+                                class="text-muted text-decoration-none small">Careers</a></li>
+
                         <li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none small">Contact
                                 Us</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-6">
                     <h6 class="footer-title">Legal</h6>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="terms-conditions.html"
@@ -241,7 +288,7 @@
                                 class="text-muted text-decoration-none small">Privacy Policy</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <h6 class="footer-title">Contact Us</h6>
                     <div class="contact-info-list mt-4">
                         <div class="contact-info-item">
@@ -287,15 +334,18 @@
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 800, once: true });
-    </script>
+    
+    
     <!-- WhatsApp Floating Button -->
     <div class="whatsapp-float">
-        <a href="https://wa.me/+919750359750" class="whatsapp-icon" target="_blank" aria-label="Contact us on WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://wa.me/+919750359750" class="whatsapp-icon" target="_blank"
+            aria-label="Contact us on WhatsApp"><i class="bi bi-whatsapp"></i></a>
     </div>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js"></script>
 </body>
 
 </html>
+
+
