@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | ABS Academy – Forging Industry-Ready Technologists</title>
     <meta name="description" content="Learn about ABS Academy's mission, expert mentors, and AI-first teaching philosophy that creates industry-ready professionals.">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
@@ -13,17 +13,38 @@
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-glass py-3">
+        <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-glass py-2">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><img src="logo23.png" alt="ABS Academy" style="height:80px;object-fit:contain;"></a>
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <a class="navbar-brand text-decoration-none" href="index.html">
+                <img src="logo23.png" alt="ABS Academy Logo" style="height: 60px; object-fit: contain;">
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
                     <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="index.html">Home</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-success" href="about.html">About</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="courses.html">Course</a></li>
-                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="admission.html">Admission</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="about.html">About</a></li>
+                    <li class="nav-item dropdown mx-2">
+                        <a class="nav-link dropdown-toggle fw-semibold text-muted" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Course
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-lg p-3 rounded-4" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="ai-development.html">AI Development</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="ai-automations.html">AI Automations</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="digital-marketing-ai.html">Digital Marketing with AI</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="web-development.html">Web Development</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="full-stack-development.html">Full Stack Development</a></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-medium small mb-1" href="graphic-design.html">Graphic Design</a></li>
+                            <li><hr class="dropdown-divider opacity-10"></li>
+                            <li><a class="dropdown-item rounded-3 py-2 px-3 fw-bold small text-primary" href="courses.html">View All Courses</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="workshops.html">Workshops</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="summer-camp.html">Summer Camp</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="careers.html">Careers</a></li>
                     <li class="nav-item mx-2"><a class="nav-link fw-semibold text-muted" href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
@@ -31,10 +52,11 @@
     </nav>
 
     <!-- Hero Header -->
-    <header class="py-5 mt-5 bg-soft-green border-bottom">
+    <header class="bg-soft-green py-4 mt-5  border-bottom position-relative overflow-hidden">
+        
         <div class="container pt-lg-5 text-center" data-aos="fade-up">
             <span class="text-success fw-bold text-uppercase small" style="letter-spacing:2px;">Our Story</span>
-            <h1 class="display-3 fw-800 text-dark mt-2 mb-3">About <span class="text-gradient">ABS Academy</span></h1>
+            <h1 class="display-4 fw-800 text-dark mt-2 mb-3">About <span class="text-gradient">ABS Academy</span></h1>
             <p class="lead text-secondary mx-auto col-md-8">We are not just a training academy. We are an elite technology launchpad — built to transform ambitious minds into industry-defining professionals.</p>
         </div>
     </header>
@@ -232,7 +254,7 @@
             <h2 class="display-5 fw-bold text-dark mb-3">Ready to Join the <span class="text-gradient">ABS Family?</span></h2>
             <p class="lead text-muted mb-5 col-md-7 mx-auto">Your journey from learner to industry professional starts with a single decision. Make it today.</p>
             <div class="d-flex justify-content-center gap-3 flex-wrap">
-                <a href="admission.html" class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg">Apply Now</a>
+                <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg">Apply Now</a>
                 <a href="courses.html" class="btn btn-outline-dark btn-lg rounded-pill px-5">Explore Courses</a>
             </div>
         </div>
@@ -243,43 +265,86 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-4">
-                    <div class="mb-4"><a href="index.html"><img src="logo23.png" alt="ABS Academy Logo" style="height:70px;object-fit:contain;"></a></div>
-                    <p class="pe-lg-5 small" style="color:#94a3b8;">Empowering the next generation of AI-driven software developers with industry-relevant skills and placement confidence.</p>
+                    <div class="mb-4">
+                        <a href="index.html">
+                            <img src="logo23.png" alt="ABS Academy Logo" style="height: 70px; object-fit: contain;">
+                        </a>
+                    </div>
+                    <p class="pe-lg-5 small" style="color: #94a3b8;">
+                        Empowering the next generation of AI-driven software developers with industry-relevant skills
+                        and placement confidence.
+                    </p>
                     <div class="d-flex gap-3 mt-4">
                         <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://www.instagram.com/aspirentech_academy/" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.instagram.com/aspirentech_academy/" class="social-icon"><i
+                                class="bi bi-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2">
                     <h6 class="footer-title">Quick Links</h6>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none small">About Us</a></li>
-                        <li class="mb-2"><a href="courses.html" class="text-muted text-decoration-none small">Courses</a></li>
-                        <li class="mb-2"><a href="admission.html" class="text-muted text-decoration-none small">Admission</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none small">Contact Us</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none small">About Us</a>
+                        </li>
+                        <li class="mb-2"><a href="courses.html"
+                                class="text-muted text-decoration-none small">Courses</a>
+                        </li>
+                        <li class="mb-2"><a href="workshops.html" class="text-muted text-decoration-none small">Workshops</a></li>
+                        <li class="mb-2"><a href="summer-camp.html" class="text-muted text-decoration-none small">Summer Camp</a></li>
+                        <li class="mb-2"><a href="careers.html" class="text-muted text-decoration-none small">Careers</a></li>
+                        
+                        <li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none small">Contact
+                                Us</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-lg-2">
                     <h6 class="footer-title">Legal</h6>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="terms-conditions.html" class="text-muted text-decoration-none small">Terms & Conditions</a></li>
-                        <li class="mb-2"><a href="privacy-policy.html" class="text-muted text-decoration-none small">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="terms-conditions.html"
+                                class="text-muted text-decoration-none small">Terms & Conditions</a></li>
+                        <li class="mb-2"><a href="privacy-policy.html"
+                                class="text-muted text-decoration-none small">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">
                     <h6 class="footer-title">Contact Us</h6>
                     <div class="contact-info-list mt-4">
-                        <div class="contact-info-item"><i class="bi bi-geo-alt"></i><span class="small">2nd Floor, SBI Bank Building, TNEB Phase 2, Royakottai Road, Wahab Nagar, Krishngiri</span></div>
-                        <div class="contact-info-item"><i class="bi bi-envelope"></i><span class="small">absacademy@gmail.com</span></div>
-                        <div class="contact-info-item"><i class="bi bi-telephone"></i><div class="d-flex flex-column"><span class="small">+91 9750359750</span><span class="small">+91 9566004966</span></div></div>
+                        <div class="contact-info-item">
+                            <i class="bi bi-geo-alt"></i>
+                            <span class="small">2nd Floor, SBI Bank Building, TNEB Phase 2, Royakottai Road, Wahab
+                                Nagar, Krishngiri</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="bi bi-envelope"></i>
+                            <span class="small">absacademy@gmail.com</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="bi bi-telephone"></i>
+                            <div class="d-flex flex-column">
+                                <span class="small">+91 9750359750</span>
+                                <span class="small">+91 9566004966</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div class="footer-bottom mt-5">
                 <div class="row align-items-center">
-                    <div class="col-md-6 text-center text-md-start"><p class="text-muted small mb-0">© 2026 ABS Academy. All rights reserved.</p></div>
-                    <div class="col-md-6 text-center text-md-end mt-3 mt-md-0"><p class="text-muted small mb-0">Powered by <a href="https://aspirentech.com" target="_blank" class="powered-by ms-1 text-decoration-none"><img src="https://aspirentech.com/assets/aspirentech-logo-new-B7I5o4Z6.png" alt="AspirenTech" height="20"></a></p></div>
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="text-muted small mb-0">© 2026 ABS Academy. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                        <p class="text-muted small mb-0">
+                            Powered by
+                            <a href="https://aspirentech.com" target="_blank"
+                                class="powered-by ms-1 text-decoration-none">
+                                <img src="https://aspirentech.com/assets/aspirentech-logo-new-B7I5o4Z6.png"
+                                    alt="AspirenTech" height="20">
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
