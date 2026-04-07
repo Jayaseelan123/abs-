@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Courses | ABS Academy</title>
+    <title>Gallery | ABS Academy</title>
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -16,24 +16,68 @@
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        .modal-content {
-            border-radius: 2rem;
-            border: none;
+        .gallery-container {
+            columns: 3 300px;
+            column-gap: 1.5rem;
+        }
+
+        .gallery-item {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 1.5rem;
+            border-radius: 1.2rem;
             overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
-        .module-item {
-            padding: 1.25rem;
-            border-radius: 1rem;
-            background: #f8fafc;
-            margin-bottom: 0.75rem;
-            transition: all 0.3s ease;
-            border-left: 4px solid #198754;
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
         }
 
-        .module-item:hover {
-            background: #e9ecef;
-            transform: translateX(5px);
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            border-radius: 1.2rem;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 60%);
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-caption {
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-container {
+                columns: 2 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-container {
+                columns: 1;
+            }
         }
     </style>
 </head>
@@ -123,159 +167,96 @@
     </nav>
 
     <!-- Header -->
-    <header class="bg-soft-green-gradient py-4  border-bottom position-relative overflow-hidden">
-
+    <header class="bg-soft-green py-4 border-bottom overflow-hidden position-relative">
         <div class="container pt-lg-5 text-center position-relative">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-7 text-start">
-
-                    <h1 class="display-4 fw-800 text-dark mb-3">Our <span class="text-gradient">Specializations</span>
-                    </h1>
-                    <p class="lead text-secondary  col-lg-10">Click "View Modules" on any track to see your future
-                        career
-                        roadmap.</p>
-
-                </div>
-                <div class="col-lg-5 text-center position-relative">
-                    <div class="hero-image-card" data-aos="zoom-in" data-aos-delay="300">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
-                            alt="Hero Image" class="img-fluid rounded-4 shadow-lg">
-                    </div>
-                </div>
-            </div>
+            <span class="badge bg-soft-green text-success px-3 py-2 rounded-pill fw-bold mb-3"
+                data-aos="fade-up">Visual Journey</span>
+            <h1 class="display-4 fw-800 text-dark mb-3" data-aos="fade-up" data-aos-delay="100">Life at <span
+                    class="text-gradient">ABS Academy</span></h1>
+            <p class="lead text-secondary col-lg-8 mx-auto mb-5" data-aos="fade-up" data-aos-delay="200">
+                Explore the moments, milestones, and shared successes of our vibrant student community.
+            </p>
         </div>
     </header>
 
-    <!-- Detailed Courses Grid -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row g-4">
-                <!-- 1. AI Development -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                    <div class="course-card-custom h-100 bg-white border-top border-5 border-success p-4">
-                        <div class="icon-box gradient-icon-box mb-4"><i class="bi bi-robot fs-3"></i></div>
-                        <h4 class="fw-bold mb-3">AI Development</h4>
-                        <p class="text-muted small mb-4">Master neural networks, LLMs (ChatGPT APIs), and Python to
-                            build next-gen AI applications.</p>
-                        <ul class="list-unstyled small mb-4">
-                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Python for AI modeling</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Neural Network Architecture
-                            </li>
-                            <li><i class="bi bi-check2 text-success me-2"></i> LLM & GPT Integration</li>
-                        </ul>
-                        <a href="ai-development.html" class="btn btn-success w-100 rounded-pill">View Program
-                            Details</a>
+    <!-- Gallery Section -->
+    <section class="py-5 bg-white">
+        <div class="container py-lg-4">
+            <div class="gallery-container" data-aos="fade-up">
+                <!-- Event 1 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
+                        alt="Collaboration Session">
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">Interactive Collaboration Session</span>
                     </div>
                 </div>
-
-                <!-- 2. AI Automations -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="course-card-custom h-100 bg-white border-top border-5 border-success p-4">
-                        <div class="icon-box gradient-icon-box mb-4"><i class="bi bi-cpu fs-3"></i></div>
-                        <h4 class="fw-bold mb-3">AI Automations</h4>
-                        <p class="text-muted small mb-4">Master No-code/Low-code AI tools to automate complex business
-                            workflows and operations.</p>
-                        <ul class="list-unstyled small mb-4">
-                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Workflow Automation Lab</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Make.com & Zapier AI</li>
-                            <li><i class="bi bi-check2 text-success me-2"></i> AI Agent Orchestration</li>
-                        </ul>
-                        <a href="ai-automations.html" class="btn btn-success w-100 rounded-pill">View Program
-                            Details</a>
+                <!-- Event 2 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80"
+                        alt="Tech Workshop">
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">Advanced Tech Workshop</span>
                     </div>
                 </div>
-
-                <!-- 3. Digital Marketing with AI -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="course-card-custom h-100 bg-white border-top border-5 border-success p-4">
-                        <div class="icon-box gradient-icon-box mb-4"><i class="bi bi-megaphone fs-3"></i></div>
-                        <h4 class="fw-bold mb-3">Digital Marketing with AI</h4>
-                        <p class="text-muted small mb-4">Scale brands using AI-driven SEO, content strategies, and
-                            performance marketing tools.</p>
-                        <ul class="list-unstyled small mb-4">
-                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> AI-Powered SEO Strategy</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Meta Ads with Predictive AI
-                            </li>
-                            <li><i class="bi bi-check2 text-success me-2"></i> Content Automation</li>
-                        </ul>
-                        <a href="digital-marketing-ai.html" class="btn btn-success w-100 rounded-pill">View Program
-                            Details</a>
+                <!-- Event 3 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
+                        alt="Team Project">
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">MERN Stack Team Project</span>
                     </div>
                 </div>
-
-                <!-- 4. Vibe Coding -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                    <div class="course-card-custom h-100 bg-white border-top border-5 border-success p-4">
-                        <div class="icon-box gradient-icon-box mb-4"><i class="bi bi-robot fs-3"></i></div>
-                        <h4 class="fw-bold mb-3">Vibe Coding</h4>
-                        <p class="text-muted small mb-4">Master the art of building applications through natural
-                            language and AI assistants.</p>
-                        <ul class="list-unstyled small mb-4">
-                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Advanced AI Prompting</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Rapid Prototyping</li>
-                            <li><i class="bi bi-check2 text-success me-2"></i> AI Debugging</li>
-                        </ul>
-                        <a href="vibe-coding.html" class="btn btn-success w-100 rounded-pill">View Program
-                            Details</a>
+                <!-- Event 4 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+                        alt="Student Success">
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">Placement Celebration</span>
                     </div>
                 </div>
-
-                <!-- 5. Full Stack Development -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="course-card-custom h-100 bg-white border-top border-5 border-danger p-4">
-                        <div class="icon-box gradient-icon-box mb-4"><i class="bi bi-database-check fs-3"></i></div>
-                        <h4 class="fw-bold mb-3">Full Stack Development</h4>
-                        <p class="text-muted small mb-4">Become a complete engineer by mastering the MERN stack and
-                            professional cloud deployment.</p>
-                        <ul class="list-unstyled small mb-4">
-                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> React + Node JS Logic</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Database Architecture</li>
-                            <li><i class="bi bi-check2 text-success me-2"></i> AWS/Cloud Scalability</li>
-                        </ul>
-                        <a href="full-stack-development.html" class="btn btn-success w-100 rounded-pill">View Program
-                            Details</a>
+                <!-- Event 5 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
+                        alt="Campus Life">
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">Campus Hackathon Day</span>
                     </div>
                 </div>
-
-                <!-- 6. Graphic Design -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="course-card-custom h-100 bg-white border-top border-5 border-dark p-4">
-                        <div class="icon-box gradient-icon-box mb-4"><i class="bi bi-palette fs-3"></i></div>
-                        <h4 class="fw-bold mb-3">Graphic Design</h4>
-                        <p class="text-muted small mb-4">Master professional brand identity design and visual
-                            storytelling with industry tools.</p>
-                        <ul class="list-unstyled small mb-4">
-                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Adobe Creative Suite Lab
-                            </li>
-                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> Brand Identity Strategy</li>
-                            <li><i class="bi bi-check2 text-success me-2"></i> Commercial Vector Arts</li>
-                        </ul>
-                        <a href="graphic-design.html" class="btn btn-success w-100 rounded-pill">View Program
-                            Details</a>
+                <!-- Event 6 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80"
+                        alt="AI Summit">
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">AI Ethics Summit</span>
                     </div>
                 </div>
-
-                <!-- 7. UI/UX Design -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
-                    <div class="course-card-custom h-100 bg-white border-top border-5 border-success p-4">
-                        <div class="icon-box gradient-icon-box mb-4"><i class="bi bi-people-fill fs-3"></i></div>
-                        <h4 class="fw-bold mb-3">UI/UX Design</h4>
-                        <p class="text-muted small mb-4">Master the art of user-centered design and learn to create
-                            intuitive digital experiences.</p>
-                        <ul class="list-unstyled small mb-4">
-                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> User Research Methods</li>
-                            <li class="mb-2"><i class="bi bi-check2 text-success me-2"></i> UI Principles</li>
-                            <li><i class="bi bi-check2 text-success me-2"></i> High-Fidelity Prototyping</li>
-                        </ul>
-                        <a href="ui-ux-design.html" class="btn btn-success w-100 rounded-pill">View Program
-                            Details</a>
+                <!-- Event 7 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80"
+                        alt="Design Workshop">
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">UI/UX Design Masterclass</span>
+                    </div>
+                </div>
+                <!-- Event 8 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80"
+                        alt="Classroom Study">
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">Focused Classroom Learning</span>
+                    </div>
+                </div>
+                <!-- Event 9 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=80"
+                        alt="Career Fair">
+                    <div class="gallery-overlay">
+                        <span class="gallery-caption">Annual Industry Career Fair</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    </div>
-    </div>
     </section>
 
     <!-- Footer -->
@@ -305,18 +286,15 @@
                         <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none small">About Us</a>
                         </li>
                         <li class="mb-2"><a href="courses.html"
-                                class="text-muted text-decoration-none small">Courses</a>
-                        </li>
+                                class="text-muted text-decoration-none small">Courses</a></li>
                         <li class="mb-2"><a href="workshops.html"
                                 class="text-muted text-decoration-none small">Workshops</a></li>
                         <li class="mb-2"><a href="summer-camp.html" class="text-muted text-decoration-none small">Summer
                                 Camp</a></li>
                         <li class="mb-2"><a href="careers.html"
                                 class="text-muted text-decoration-none small">Careers</a></li>
-
                         <li class="mb-2"><a href="contact.html" class="text-muted text-decoration-none small">Contact
-                                Us</a>
-                        </li>
+                                Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-6">
@@ -375,12 +353,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-
-
     <!-- WhatsApp Floating Button -->
     <div class="whatsapp-float">
         <a href="https://wa.me/+919750359750" class="whatsapp-icon" target="_blank"
-            aria-label="Contact us on WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            aria-label="Contact us on WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+        </a>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

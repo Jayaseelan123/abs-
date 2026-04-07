@@ -1,15 +1,15 @@
 :root {
-    --primary-color: #1F74B5;
-    /* Logo 'a' Blue */
-    --primary-dark: #16568A;
+    --primary-color: #26B977;
+    /* Logo 's' Green */
+    --primary-dark: #1e9a62;
     --secondary-color: #26B977;
     /* Logo 's' Green */
     --text-dark: #58595b;
     /* Logo dark gray */
     --text-muted: #8c8c8c;
-    --bg-light: #1b84ed;
-    --bg-soft-blue: #f2f8fc;
-    --gradient-blue: linear-gradient(135deg, #1F74B5 0%, #26B977 100%);
+    --bg-light: #26B977;
+    --bg-soft-blue: #f2faf6;
+    --gradient-blue: linear-gradient(135deg, #26B977 0%, #1e9a62 100%);
     --gradient-text: linear-gradient(90deg, #1F74B5 0%, #26A69A 50%, #26B977 100%);
     --teal-text: #26A69A;
     /* Logo 'b' Teal */
