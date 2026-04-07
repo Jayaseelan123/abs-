@@ -10,6 +10,7 @@
     --bg-light: #26B977;
     --bg-soft-blue: #f2faf6;
     --gradient-blue: linear-gradient(135deg, #26B977 0%, #1e9a62 100%);
+    --gradient-logo: linear-gradient(135deg, #1F74B5 0%, #26A69A 50%, #26B977 100%);
     --gradient-text: linear-gradient(90deg, #1F74B5 0%, #26A69A 50%, #26B977 100%);
     --teal-text: #26A69A;
     /* Logo 'b' Teal */
@@ -366,38 +367,42 @@ p,
 }
 
 /* Buttons */
-.btn-primary {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--teal-text) 50%, var(--secondary-color) 100%);
+.btn-primary, .btn-success {
+    background: var(--gradient-logo);
     background-size: 200% auto;
-    border: none;
+    border: none !important;
     color: white !important;
     padding: 0.8rem 2rem;
     border-radius: 50px;
     font-weight: 600;
     transition: var(--transition-premium);
+    box-shadow: 0 4px 15px rgba(31, 116, 181, 0.2);
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-success:hover {
     background-position: right center;
     transform: translateY(-4px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: 0 10px 25px rgba(31, 116, 181, 0.4);
+    color: white !important;
 }
 
-.btn-outline-primary {
-    border-width: 2px;
-    color: var(--primary-color);
-    border-color: var(--primary-color);
+.btn-outline-primary, .btn-outline-success {
+    border: 2px solid #26B977;
+    background: transparent;
+    color: #26B977;
     padding: 0.8rem 2rem;
     border-radius: 50px;
     font-weight: 600;
     transition: var(--transition-premium);
 }
 
-.btn-outline-primary:hover {
-    background-color: var(--primary-color);
-    color: white;
+.btn-outline-primary:hover, .btn-outline-success:hover {
+    background: var(--gradient-logo);
+    background-size: 200% auto;
+    border-color: transparent;
+    color: white !important;
     transform: translateY(-4px);
-    box-shadow: var(--shadow-hover);
+    box-shadow: 0 10px 25px rgba(31, 116, 181, 0.3);
 }
 
 /* PAP Section */
