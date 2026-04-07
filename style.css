@@ -98,6 +98,15 @@ p,
     background-color: #f2faf6 !important;
 }
 
+.hover-soft-green:hover {
+    background-color: #f2faf6 !important;
+    border-color: rgba(38, 185, 119, 0.1) !important;
+}
+
+.hover-border-light:hover {
+    border-color: rgba(38, 185, 119, 0.1) !important;
+}
+
 .shadow-2xl {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
 }
@@ -331,8 +340,15 @@ p,
 }
 
 .gradient-icon-box {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--teal-text) 50%, var(--secondary-color) 100%);
+    background: var(--gradient-logo);
+    background-size: 200% auto;
     color: white !important;
+    transition: var(--transition-premium);
+}
+
+.gradient-icon-box:hover {
+    background-position: right center;
+    transform: scale(1.1) rotate(5deg);
 }
 
 .course-card-custom {
@@ -846,4 +862,27 @@ p,
 
 .powered-by:hover img {
     opacity: 1;
+}
+
+/* Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
 }

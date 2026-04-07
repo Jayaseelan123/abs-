@@ -79,6 +79,50 @@
                 columns: 1;
             }
         }
+
+        /* Filter Styles */
+        .filter-btn {
+            border: 2px solid var(--primary-color);
+            background: transparent;
+            color: var(--primary-color);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition-premium);
+            cursor: pointer;
+            margin: 0.5rem;
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .filter-btn.active {
+            background: var(--gradient-logo);
+            border-color: transparent;
+            color: white !important;
+            box-shadow: 0 10px 20px rgba(31, 116, 181, 0.3);
+        }
+
+        .gallery-item.hide {
+            display: none !important;
+        }
+
+        .gallery-item.show {
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 
@@ -179,20 +223,32 @@
         </div>
     </header>
 
+    <!-- Filter Buttons -->
+    <section class="py-4 bg-light border-bottom sticky-top shadow-sm" style="top: 85px; z-index: 99;">
+        <div class="container text-center">
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="general">General</button>
+                <button class="filter-btn" data-filter="success_story">Success Story</button>
+                <button class="filter-btn" data-filter="workshops">Workshops</button>
+            </div>
+        </div>
+    </section>
+
     <!-- Gallery Section -->
     <section class="py-5 bg-white">
         <div class="container py-lg-4">
-            <div class="gallery-container" data-aos="fade-up">
-                <!-- Event 1 -->
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
-                        alt="Collaboration Session">
+            <div class="gallery-container" id="gallery-grid" data-aos="fade-up">
+                <!-- Event 1: Success Celebration -->
+                <div class="gallery-item" data-category="success_story">
+                    <img src="gallery_success_graduation_1775562430579.png"
+                        alt="Graduation Success at ABS Academy">
                     <div class="gallery-overlay">
-                        <span class="gallery-caption">Interactive Collaboration Session</span>
+                        <span class="gallery-caption">ABS Academy Graduation Ceremony</span>
                     </div>
                 </div>
                 <!-- Event 2 -->
-                <div class="gallery-item">
+                <div class="gallery-item" data-category="workshops">
                     <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80"
                         alt="Tech Workshop">
                     <div class="gallery-overlay">
@@ -200,7 +256,7 @@
                     </div>
                 </div>
                 <!-- Event 3 -->
-                <div class="gallery-item">
+                <div class="gallery-item" data-category="workshops">
                     <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80"
                         alt="Team Project">
                     <div class="gallery-overlay">
@@ -208,7 +264,7 @@
                     </div>
                 </div>
                 <!-- Event 4 -->
-                <div class="gallery-item">
+                <div class="gallery-item" data-category="success_story">
                     <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
                         alt="Student Success">
                     <div class="gallery-overlay">
@@ -216,7 +272,7 @@
                     </div>
                 </div>
                 <!-- Event 5 -->
-                <div class="gallery-item">
+                <div class="gallery-item" data-category="workshops">
                     <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
                         alt="Campus Life">
                     <div class="gallery-overlay">
@@ -224,7 +280,7 @@
                     </div>
                 </div>
                 <!-- Event 6 -->
-                <div class="gallery-item">
+                <div class="gallery-item" data-category="workshops">
                     <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80"
                         alt="AI Summit">
                     <div class="gallery-overlay">
@@ -232,7 +288,7 @@
                     </div>
                 </div>
                 <!-- Event 7 -->
-                <div class="gallery-item">
+                <div class="gallery-item" data-category="workshops">
                     <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80"
                         alt="Design Workshop">
                     <div class="gallery-overlay">
@@ -240,7 +296,7 @@
                     </div>
                 </div>
                 <!-- Event 8 -->
-                <div class="gallery-item">
+                <div class="gallery-item" data-category="general">
                     <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80"
                         alt="Classroom Study">
                     <div class="gallery-overlay">
@@ -248,7 +304,7 @@
                     </div>
                 </div>
                 <!-- Event 9 -->
-                <div class="gallery-item">
+                <div class="gallery-item" data-category="success_story">
                     <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=80"
                         alt="Career Fair">
                     <div class="gallery-overlay">
@@ -363,6 +419,33 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to current button
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.classList.remove('hide');
+                            item.classList.add('show');
+                        } else {
+                            item.classList.remove('show');
+                            item.classList.add('hide');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
